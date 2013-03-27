@@ -1,4 +1,10 @@
 class Photo < ActiveRecord::Base
   attr_accessible :content, :name, :image
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :image,
+    :storage => :dropbox,
+    :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
+    :styles => { :medium => "300x300" },
+    :dropbox_options => {
+      :path => proc { |style| "#{style}/#{id}_#{image.original_filename}" }
+    }
 end
