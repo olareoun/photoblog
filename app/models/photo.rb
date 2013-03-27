@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  attr_accessible :content, :name, :image
+  attr_accessible :content, :name, :image, :aperture, :iso, :speed
   has_attached_file :image,
     :storage => :dropbox,
     :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
