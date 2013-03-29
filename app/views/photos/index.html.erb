@@ -8,22 +8,29 @@
             <div class="span6">
               <h1><%= photo.name %></h1>
             </div>
-            <div class="span2 photo-content img-circle">
-              <h4>Apertura</h4>
-              <h4><%= photo.aperture %></h4>
+            <div class="span2">
+              <div class="photo-content img-circle">
+                <h4>Apertura</h4>
+                <h4><%= photo.aperture %></h4>
+              </div>
             </div>
-            <div class="span2 photo-content img-circle">
-              <h4>Velocidad</h4>
-              <h4><%= photo.speed %></h4>
+            <div class="span2">
+              <div class="photo-content img-circle">
+                <h4>Velocidad</h4>
+                <h4><%= photo.speed %></h4>
+              </div>
             </div>
-            <div class="span2 photo-content img-circle">
-              <h4>ISO</h4>
-              <h4><%= photo.iso %></h4>
+            <div class="span2">
+              <div class="photo-content img-circle">
+                <h4>ISO</h4>
+                <h4><%= photo.iso %></h4>
+              </div>
             </div>
           </div>
           <div class="row-fluid">
             <div class="span12">
               <h4><%= photo.content %></h4>
+              <%=l photo.created_at %>
             </div>
           </div>
         </div> <!-- photo-detail --> 
@@ -31,5 +38,3 @@
     </div>
   </div>
 <% end %>
-
-<%= link_to 'New Photo', new_photo_path %>

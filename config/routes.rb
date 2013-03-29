@@ -2,7 +2,7 @@
   resources :photos
 
 
-  root :to => "home#index"
+  root :to => "photos#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

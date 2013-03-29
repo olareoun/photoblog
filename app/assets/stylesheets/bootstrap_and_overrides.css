@@ -5,3 +5,23 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+.container-fluid{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.navbar-inner{
+    background:transparent !important;
+    }
+.navbar-inner container{
+    background:transparent !important;
+    }
+.navbar{
+    background:transparent !important;
+    }
+#nav-main{
+    background:transparent !important;
+    }
+#banner{
+    background:transparent !important;
+    }​
